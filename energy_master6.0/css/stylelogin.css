@@ -1,0 +1,47 @@
+.login{
+    text-align: center;
+}
+.Login h1{
+    font-size: 70px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #3c0e78;
+    text-align: center;
+}
+
+.Login input{
+    width: 160px;
+    border-radius: 10px;
+    outline: none;
+    border-color: #f1efef;
+    
+}
+.Login label{
+    color: white;
+    width: 120px;
+    padding: 1px;
+    margin: -20px;
+    text-align: center;
+}
+
+.log{
+    position: relative;
+    padding: 50px;
+    margin: 0 auto;
+    width: 1080px;
+    height: 180px;
+    text-align: center;
+    background: #3c0e78;
+    box-shadow: 0 5px 15px #5f30e0;
+    border-radius: 20px;
+}
+
+.env{
+    text-align: center;
+    padding: 25px;
+}
+
+.env input{
+    font-size: 20px;
+}

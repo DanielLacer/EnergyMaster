@@ -1,0 +1,108 @@
+.usa{
+
+    position: relative;
+    padding: 5px;
+    margin: 130px auto;
+    align-content: center;
+    width: 1520px;
+    height: 300px;
+    background: #3c0e78;
+
+}
+
+.usa tr{
+    border: 4px solid white;
+    font-size: 16px;
+}
+
+.usa th{
+  
+  padding: 8px;
+  color: #f8bc1a;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.usa td{
+
+  color: white;
+  padding: 8px;
+
+}
+
+.conf{
+
+    position: relative;
+    padding: 5px;
+    margin: 130px auto;
+    align-content: center;
+    width: 1520px;
+    top: -300px;
+    height: 300px;
+    background: #f8bc1a;
+  
+}
+  
+.conf label{
+    color: white;
+    margin: 14px;
+}
+.conf input{
+    border-radius: 20px;
+    border-color: white;
+    outline: none;
+    align-self: center;
+    color: #3c0e78;
+}
+  
+.conf select{
+    border-radius: 20px;
+    border-color: white;
+    outline: none;
+    align-items: center;
+    color: #3c0e78;
+}
+
+.footerperfil {
+    position: relative;
+}
+
+.tab tr{
+    border: 4px solid #21014b;
+    font-size: 16px;
+    background-color: #3c0e78;
+    
+}
+
+.tab th{
+  
+  padding: 20px;
+  background-color: #3c0e78;
+  color: #f8bc1a;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.tab td{
+
+  padding: 10px;
+  color: rgb(255, 255, 255);
+
+}
+
+h1{
+    
+    font-size: 40px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #3c0e78;
+    text-align: center;
+    position: relative;
+    top: -300px;
+  
+}

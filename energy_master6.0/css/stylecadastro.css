@@ -1,0 +1,109 @@
+.Form-Login h1{
+    font-size: 70px;
+    padding: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: #3c0e78;
+    text-align: center;
+  
+}
+
+.bloco1 label{
+    width: 120px;
+    padding: 1px;
+    margin: 10px;
+    text-align: center;
+}
+  
+.Form-Login input{
+    width: 120px;
+}
+  
+.bloco1 input{
+    width: 160px;
+    border-radius: 10px;
+    outline: none;
+    border-color: #3c0e78;
+}
+
+.Form-Login select{
+    width: 120px;
+}
+  
+.bloco1 select{
+    width: 160px;
+    border-radius: 10px;
+    outline: none;
+    border-color: #3c0e78;
+}
+
+.Form-Login label{
+    text-align: center;
+    padding: 15px;
+    color: white;
+}
+
+.cadas{
+
+    position: relative;
+    padding: 50px;
+    margin: 0 auto;
+    width: 1080px;
+    align-content: center;
+    height: 420px;
+    background: #3c0e78;
+    box-shadow: 0 5px 15px #5f30e0;
+    border-radius: 20px;
+    
+}
+
+.sen{
+    text-align: center;
+    padding: 20px;
+}
+
+.sen input{
+    font-family: 'Roboto', sans-serif;
+    width: 95px;
+    font-weight: bold;
+    font-size: 20px;
+    border-color: #f1efef;
+}
+
+.sen input[value="Agendar"]{
+    font-family: 'Roboto', sans-serif;
+    width: 120px;
+    font-weight: bold;
+    font-size: 20px;
+    border-color: #f1efef;
+}
+
+.sen :hover{
+    color: #3c0e78;;
+}
+
+.mod{
+    position: relative;
+    padding: 50px;
+    margin: 0 auto;
+    width: 700px;
+    align-content: center;
+    height: 420px;
+    background: #3c0e78;
+    box-shadow: 0 5px 15px #5f30e0;
+    border-radius: 20px;
+  
+}
+
+.mod label{
+    color: white;
+    margin: 14px;
+}
+
+.mod input{
+    border-radius: 20px;
+    border-color: white;
+    outline: none;
+    align-self: center;
+    color: #3c0e78;    
+}

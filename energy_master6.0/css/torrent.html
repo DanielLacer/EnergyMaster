@@ -1,0 +1,1091 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>OxTorrent - Téléchargement de Torrent OxTorrent.co Officiel</title>
+<meta name="description" content="OxTorrent - Téléchargement de Films, Séries, Musiques, Logiciels, Jeux, Ebooks" />
+<meta name="keywords" content="oxtorrent, telecharger, telechargement, download, free, torrent, torrente, torrents, series, films, dvdrip, bdrip, xvid, divx, x264, gratuit, gratuitement, exclue, exclus, french, truefrench, logiciels, jeux, musique, album, mangas, ebook, spectacle, francais, bluray, 1080p, 720p, vostfr, vfstfr, dvdscr, mp3" />
+<meta http-equiv="Content-Language" content="fr-fr" />
+<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+<link href="/static/css/style.css" rel="stylesheet">
+<link href="/static/css/bootstrap.css" rel="stylesheet">
+<script type="85bad2006fd3ef528ba54470-text/javascript" src="/static/js/jquery.min.js"></script>
+<script type="85bad2006fd3ef528ba54470-text/javascript" src="/static/js/bootstrap.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+.listing-torrent{overflow: hidden;}
+.listing-detail{overflow: hidden;}
+.main-wrap{float: left;width: 74%;}
+.base-block{width: 100%}
+.block-detail{width: 100%}
+.bloc-torrent{position: relative;margin-left: 0;float: right;}
+.table{width: 100%}
+.torent-nav{display: none}
+#trier{margin: 0}
+@media (max-width: 767px) {
+    #conteneur{width: 100%;}
+    #header{width: 100%;}
+    #contenu{width: 100%}
+    #ariane{width: 100%;height: auto;margin-top: 5px}
+    .main-wrap{width: 100%;}
+    .bloc-torrent{width: 100%}
+    .block-detail{height: auto}
+    #header .torent-nav{display: block;background: 0 0;margin: 0;min-height: auto;}
+    #header .torent-nav li{width: 100%;display: block;float: none;text-align: center;}
+    #menu{display: none}
+    .torent-nav .navbar-collapse{width: 100%;background: #393939;}
+    .navbar-default .navbar-nav>li>a{color: #b3b3b3}
+    .col-md-4{width: 100%;}
+    .col-md-offset-2{margin-left: 0}
+    .col-md-4 .dropdown{float: left;}
+    .cover{margin: 11px 0 11px 0;width: 50%;}
+    .listing-torrent{padding: 1px 7px 7px;}
+    .listing-detail {padding: 1px 7px;}
+    #torrentsimage img {display: block;margin: 0 auto 5px auto;float: none;}
+    #torrentsdesc p{word-break: break-all;}
+    .table td{word-break: break-all!important;}
+}
+</style>
+</head>
+<body>
+<div id="conteneur">
+<div id="header">
+<h1><a href="/" id="logo"><img src="/static/img/logo.jpg" alt="oxtorrent"></a></h1>
+<form class="form" method="POST" action="/search_torrent">
+<div class="recherche">
+<input type="text" name="torrentSearch" placeholder="Recherche..." value="" maxlength="49" required="">
+<button type="submit"><i class="fa fa-search "></i>
+</button>
+</div>
+</form>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" style="z-index:99;color:#dedede;background:#2e2e2e;font-size:20px;float: left;margin: 0;padding: 0 15px;">
+<i class="fa fa-bars"></i>
+</button>
+<div class="container">
+<div id="menu">
+<ul class="arbo">
+<li><a href="/" title="Accéder à l'accueil"><i class="fa fa-home" style="font-size:18px"></i></a>
+</li>
+<li> <a href="/torrents/films" title="Accéder aux Films">Films</a>
+</li>
+<li> <a href="/torrents/series" title="Accéder aux Séries">Séries</a>
+</li>
+ <li> <a href="/torrents/musique" title="Accéder aux Musiques">Musique</a>
+</li>
+<li> <a href="/torrents/ebook" title="Accéder aux Ebooks">Ebook</a>
+</li>
+<li> <a href="/torrents/logiciels" title="Accéder aux Logiciels">Logiciels</a>
+</li>
+<li> <a href="/torrents/jeux-pc" title="Accéder aux Jeux">Jeux PC</a>
+</li>
+<li> <a href="/torrents/jeux-consoles" title="Accéder aux Jeux">Jeux Consoles</a>
+</li>
+<li> <a href="/top" title="Accéder aux top 100">Top 100</a>
+</li>
+</ul>
+</div>
+<nav class="navbar navbar-default torent-nav" style="border:0;">
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<ul class="nav navbar-nav">
+<li> <a href="/torrents/films" title="Accéder aux Films">Films</a>
+</li>
+<li> <a href="/torrents/series" title="Accéder aux Séries">Séries</a>
+</li>
+<li> <a href="/torrents/musique" title="Accéder aux Musiques">Musique</a>
+</li>
+<li> <a href="/torrents/ebook" title="Accéder aux Ebooks">Ebook</a>
+</li>
+<li> <a href="/torrents/logiciels" title="Accéder aux Logiciels">Logiciels</a>
+</li>
+<li> <a href="/torrents/jeux-pc" title="Accéder aux Jeux">Jeux PC</a>
+</li>
+<li> <a href="/torrents/jeux-consoles" title="Accéder aux Jeux">Jeux Consoles</a>
+</li>
+<li> <a href="/top" title="Accéder aux top 100">Top 100</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id="ariane"><a href="/" title="Accueil">Accueil</a></div>
+<div id="contenu">
+<div class="listing-torrent">
+<div class="main-wrap">
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/films" title="Télécharger des Films Torrent"> Films</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79464/the-mauritanian-french-dvdrip-2021" title="The Mauritanian FRENCH DVDRIP 2021 en Torrent">The Mauritanian FRENCH DVDRIP 2021</a>
+</td>
+<td width="11%" align="left">1.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79463/the-mauritanian-french-bluray-1080p-2021" title="The Mauritanian FRENCH BluRay 1080p 2021 en Torrent">The Mauritanian FRENCH BluRay 1080p 2021</a>
+</td>
+<td width="11%" align="left">9.8 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79462/the-mauritanian-french-bluray-720p-2021" title="The Mauritanian FRENCH BluRay 720p 2021 en Torrent">The Mauritanian FRENCH BluRay 720p 2021</a>
+</td>
+<td width="11%" align="left">4.5 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79461/amours-irlandaises-french-dvdrip-2021" title="Amours Irlandaises FRENCH DVDRIP 2021 en Torrent">Amours Irlandaises FRENCH DVDRIP 2021</a>
+</td>
+<td width="11%" align="left">697.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79460/amours-irlandaises-french-bluray-1080p-2021" title="Amours Irlandaises FRENCH BluRay 1080p 2021 en Torrent">Amours Irlandaises FRENCH BluRay 1080p 2021</a>
+</td>
+<td width="11%" align="left">8.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79459/amours-irlandaises-french-bluray-720p-2021" title="Amours Irlandaises FRENCH BluRay 720p 2021 en Torrent">Amours Irlandaises FRENCH BluRay 720p 2021</a>
+</td>
+<td width="11%" align="left">3.2 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79458/chaos-walking-french-dvdrip-2021" title="Chaos Walking FRENCH DVDRIP 2021 en Torrent">Chaos Walking FRENCH DVDRIP 2021</a>
+</td>
+<td width="11%" align="left">694.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79457/chaos-walking-french-bluray-1080p-2021" title="Chaos Walking FRENCH BluRay 1080p 2021 en Torrent">Chaos Walking FRENCH BluRay 1080p 2021</a>
+</td>
+<td width="11%" align="left">7.6 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79456/chaos-walking-french-bluray-720p-2021" title="Chaos Walking FRENCH BluRay 720p 2021 en Torrent">Chaos Walking FRENCH BluRay 720p 2021</a>
+</td>
+<td width="11%" align="left">3.2 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79455/tom-et-jerry-french-dvdrip-2021" title="Tom et Jerry FRENCH DVDRIP 2021 en Torrent">Tom et Jerry FRENCH DVDRIP 2021</a>
+</td>
+<td width="11%" align="left">694.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79454/tom-et-jerry-french-bluray-1080p-2021" title="Tom et Jerry FRENCH BluRay 1080p 2021 en Torrent">Tom et Jerry FRENCH BluRay 1080p 2021</a>
+</td>
+<td width="11%" align="left">8.5 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79453/tom-et-jerry-french-bluray-720p-2021" title="Tom et Jerry FRENCH BluRay 720p 2021 en Torrent">Tom et Jerry FRENCH BluRay 720p 2021</a>
+</td>
+<td width="11%" align="left">4.1 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79452/french-exit-truefrench-webrip-2021" title="French Exit TRUEFRENCH WEBRIP 2021 en Torrent">French Exit TRUEFRENCH WEBRIP 2021</a>
+</td>
+<td width="11%" align="left">694.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79451/colors-of-love-french-webrip-2021" title="Colors of Love FRENCH WEBRIP 2021 en Torrent">Colors of Love FRENCH WEBRIP 2021</a>
+</td>
+<td width="11%" align="left">694.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Films"></i> <a href="/torrent/79450/colors-of-love-french-webrip-1080p-2021" title="Colors of Love FRENCH WEBRIP 1080p 2021 en Torrent">Colors of Love FRENCH WEBRIP 1080p 2021</a>
+</td>
+<td width="11%" align="left">3.1 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/series" title="Télécharger des Séries Torrent"> Séries</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79487/coroner-s03e10-final-french-hdtv" title="Coroner S03E10 FINAL FRENCH HDTV en Torrent">Coroner S03E10 FINAL FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">231.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79486/plan-b-s01e04-french-hdtv" title="Plan B S01E04 FRENCH HDTV en Torrent">Plan B S01E04 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">493.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">43</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">154</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79485/plan-b-s01e03-french-hdtv" title="Plan B S01E03 FRENCH HDTV en Torrent">Plan B S01E03 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">477.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">45</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">161</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79484/all-rise-s01e05-french-hdtv" title="All Rise S01E05 FRENCH HDTV en Torrent">All Rise S01E05 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">296.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">32</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">107</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79483/solar-opposites-s02e06-french-hdtv" title="Solar Opposites S02E06 FRENCH HDTV en Torrent">Solar Opposites S02E06 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">169.3 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">2</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">26</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79482/solar-opposites-s02e05-french-hdtv" title="Solar Opposites S02E05 FRENCH HDTV en Torrent">Solar Opposites S02E05 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">167.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">2</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">35</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79481/the-mosquito-coast-s01e04-french-hdtv" title="The Mosquito Coast S01E04 FRENCH HDTV en Torrent">The Mosquito Coast S01E04 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">362.1 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">66</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">148</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79480/the-mosquito-coast-s01e03-french-hdtv" title="The Mosquito Coast S01E03 FRENCH HDTV en Torrent">The Mosquito Coast S01E03 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">358.3 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">60</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">150</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79479/les-petits-champions-game-changers-s01e08-french-hdtv" title="Les Petits Champions : Game Changers S01E08 FRENCH HDTV en Torrent">Les Petits Champions : Game Changers S01E08 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">203.1 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">27</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">51</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79478/halston-saison-1-french-hdtv" title="Halston Saison 1 FRENCH HDTV en Torrent">Halston Saison 1 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">1.8 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">30</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">147</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79477/star-wars-the-bad-batch-s01e03-french-hdtv" title="Star Wars: The Bad Batch S01E03 FRENCH HDTV en Torrent">Star Wars: The Bad Batch S01E03 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">174.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">111</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">159</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79476/big-shot-s01e05-french-hdtv" title="Big Shot S01E05 FRENCH HDTV en Torrent">Big Shot S01E05 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">302.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">38</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">115</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79475/l-irreel-incroyables-temoignages-saison-3-french-hdtv" title="L'irréel : incroyables témoignages Saison 3 FRENCH HDTV en Torrent">L'irréel : incroyables témoignages Saison 3 FRENCH HDTV</a>
+</td>
+<td width="11%" align="left">1.1 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">32</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">103</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79474/chicago-med-s06e14-vostfr-hdtv" title="Chicago Med S06E14 VOSTFR HDTV en Torrent">Chicago Med S06E14 VOSTFR HDTV</a>
+</td>
+<td width="11%" align="left">350.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">37</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">43</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Séries"></i> <a href="/torrent/79473/nancy-drew-s02e15-vostfr-hdtv" title="Nancy Drew S02E15 VOSTFR HDTV en Torrent">Nancy Drew S02E15 VOSTFR HDTV</a>
+</td>
+<td width="11%" align="left">276.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">28</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">28</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/musique" title="Télécharger des Musique Torrent"> Musique</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79393/solid-gold-hits-2021" title="Solid Gold Hits 2021 en Torrent">Solid Gold Hits 2021</a>
+</td>
+<td width="11%" align="left">945.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">117</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">73</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79314/nrj-urban-hits-2021" title="NRJ Urban Hits 2021 en Torrent">NRJ Urban Hits 2021</a>
+</td>
+<td width="11%" align="left">225.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">26</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79313/110-hits-2021" title="110 HITS 2021 en Torrent">110 HITS 2021</a>
+</td>
+<td width="11%" align="left">849.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">307</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">179</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79312/joanna-serotonine-2021" title="Joanna - Sérotonine 2021 en Torrent">Joanna - Sérotonine 2021</a>
+</td>
+<td width="11%" align="left">93.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">35</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79311/so-la-lune-satellite-naturel-2021" title="So La Lune - Satellite naturel 2021 en Torrent">So La Lune - Satellite naturel 2021</a>
+</td>
+<td width="11%" align="left">31.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">14</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79310/keen-v-rever-2021" title="Keen' V - Rêver 2021 en Torrent">Keen' V - Rêver 2021</a>
+</td>
+<td width="11%" align="left">120.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">77</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">21</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79309/georgio-sacre-2021" title="Georgio - Sacré 2021 en Torrent">Georgio - Sacré 2021</a>
+</td>
+<td width="11%" align="left">140.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">28</td>
+<td width="9%" align="left">
+ <img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79308/7-jaws-je-vois-les-couleurs-2021" title="7 Jaws - Je vois les couleurs 2021 en Torrent">7 Jaws - Je vois les couleurs 2021</a>
+</td>
+<td width="11%" align="left">104.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">30</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79307/bakari-sur-coute-saison-1-2021" title="Bakari - Sur écoute Saison 1 - 2021 en Torrent">Bakari - Sur écoute Saison 1 - 2021</a>
+</td>
+<td width="11%" align="left">40.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">25</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">9</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79306/jewel-usain-mode-difficile-2021" title="Jewel Usain - Mode Difficile 2021 en Torrent">Jewel Usain - Mode Difficile 2021</a>
+</td>
+<td width="11%" align="left">89.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">25</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/79029/100-greatest-duets-of-all-time-2021" title="100 Greatest Duets Of All Time 2021 en Torrent">100 Greatest Duets Of All Time 2021</a>
+</td>
+<td width="11%" align="left">951.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">227</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">9</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/78706/sadek-aimons-nous-vivants-2021" title="Sadek - Aimons-Nous Vivants 2021 en Torrent">Sadek - Aimons-Nous Vivants 2021</a>
+</td>
+<td width="11%" align="left">138.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">79</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/78705/sdm-ocho-2021" title="SDM - OCHO 2021 en Torrent">SDM - OCHO 2021</a>
+</td>
+<td width="11%" align="left">117.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">106</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/78704/nesly-kezu-2021" title="Nesly - Kezu 2021 en Torrent">Nesly - Kezu 2021</a>
+</td>
+<td width="11%" align="left">117.3 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">32</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Musique"></i> <a href="/torrent/78703/ashe-22-ashe-tape-vol-3-2021" title="ASHE 22 - Ashe Tape, Vol. 3 - 2021 en Torrent">ASHE 22 - Ashe Tape, Vol. 3 - 2021</a>
+</td>
+<td width="11%" align="left">86.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">23</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/jeux-pc" title="Télécharger des Jeux-PC Torrent"> Jeux-PC</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/79401/the-pinball-arcade-1-71-28-elamigos" title="The Pinball Arcade (1.71.28) ElAmigos en Torrent">The Pinball Arcade (1.71.28) ElAmigos</a>
+</td>
+<td width="11%" align="left">8.8 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">20</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">37</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/79039/motogp-21-pc" title="MotoGP 21 (PC) en Torrent">MotoGP 21 (PC)</a>
+</td>
+<td width="11%" align="left">22.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">38</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">24</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/79038/street-fighter-v-champion-edition-pc" title="Street Fighter V: Champion Edition (PC) en Torrent">Street Fighter V: Champion Edition (PC)</a>
+</td>
+<td width="11%" align="left">43.3 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">22</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">25</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/79037/persona-5-strikers-pc" title="Persona 5 Strikers (PC) en Torrent">Persona 5 Strikers (PC)</a>
+</td>
+<td width="11%" align="left">23.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">5</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/77896/heliborne-enhanced-edition-pc" title="Heliborne - Enhanced Edition (PC) en Torrent">Heliborne - Enhanced Edition (PC)</a>
+</td>
+<td width="11%" align="left">9.5 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">49</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">11</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/77248/nebuchadnezzar-pc" title="Nebuchadnezzar (PC) en Torrent">Nebuchadnezzar (PC)</a>
+</td>
+<td width="11%" align="left">535.1 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">55</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/76894/wrc-9-pc" title="WRC 9 (PC) en Torrent">WRC 9 (PC)</a>
+</td>
+<td width="11%" align="left">17.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">100</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">29</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/76233/retro-pinball-pc" title="Retro Pinball (PC) en Torrent">Retro Pinball (PC)</a>
+</td>
+<td width="11%" align="left">471.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">76</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75623/wreckfest-pc" title="Wreckfest (PC) en Torrent">Wreckfest (PC)</a>
+</td>
+<td width="11%" align="left">24.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">8</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">12</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75622/call-of-duty-wwii-pc" title="Call of Duty®: WWII (PC) en Torrent">Call of Duty®: WWII (PC)</a>
+</td>
+<td width="11%" align="left">112.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">29</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">26</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75567/super-meat-boy-forever-pc" title="Super Meat Boy Forever (PC) en Torrent">Super Meat Boy Forever (PC)</a>
+</td>
+<td width="11%" align="left">2.6 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">17</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75566/francevfr-obstacles-and-vfr-landmarks-france-v4-pc" title="FranceVFR - Obstacles and VFR landmarks France V4 (PC) en Torrent">FranceVFR - Obstacles and VFR landmarks France V4 (PC)</a>
+</td>
+<td width="11%" align="left">318.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">29</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75427/mxgp-2020-pc" title="MXGP 2020 (PC) en Torrent">MXGP 2020 (PC)</a>
+</td>
+<td width="11%" align="left">14.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">31</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75426/devil-may-cry-5-pc" title="Devil May Cry 5 (PC) en Torrent">Devil May Cry 5 (PC)</a>
+ </td>
+<td width="11%" align="left">39.0 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">16</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-PC"></i> <a href="/torrent/75311/cyberpunk-2077-pc" title="Cyberpunk 2077 (PC) en Torrent">Cyberpunk 2077 (PC)</a>
+</td>
+<td width="11%" align="left">54.2 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">35</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/jeux-consoles" title="Télécharger des Jeux-Consoles Torrent"> Jeux-Consoles</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/76238/kirby-s-adventure-wii" title="Kirby's Adventure (WII) en Torrent">Kirby's Adventure (WII)</a>
+</td>
+<td width="11%" align="left">4.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">22</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">4</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/76237/the-lapins-cretins-party-collection-wii" title="The Lapins Crétins : Party Collection (WII) en Torrent">The Lapins Crétins : Party Collection (WII)</a>
+</td>
+<td width="11%" align="left">7.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">2</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/76236/fable-2-xbox360" title="Fable 2 (XBOX360) en Torrent">Fable 2 (XBOX360)</a>
+</td>
+<td width="11%" align="left">7.3 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">7</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/76235/apache-air-assault-xbox360" title="Apache Air Assault (XBOX360) en Torrent">Apache Air Assault (XBOX360)</a>
+</td>
+<td width="11%" align="left">7.3 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">6</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/76234/virtua-tennis-4-ps3" title="Virtua Tennis 4 (PS3) en Torrent">Virtua Tennis 4 (PS3)</a>
+</td>
+<td width="11%" align="left">3.1 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">7</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">6</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75834/fifa-20-ps4" title="FIFA 20 (PS4) en Torrent">FIFA 20 (PS4)</a>
+</td>
+<td width="11%" align="left">42.1 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">14</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">11</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75573/super-smash-bros-ultimate-switch" title="Super Smash Bros Ultimate (SWITCH) en Torrent">Super Smash Bros Ultimate (SWITCH)</a>
+</td>
+<td width="11%" align="left">16.3 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">13</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75572/final-fantasy-vii-remake-ps4" title="Final Fantasy VII Remake (PS4) en Torrent">Final Fantasy VII Remake (PS4)</a>
+</td>
+<td width="11%" align="left">84.5 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75571/call-of-duty-modern-warfare-2-campaign-remastered-ps4" title="Call of Duty Modern Warfare 2 Campaign Remastered (PS4) en Torrent">Call of Duty Modern Warfare 2 Campaign Remastered (PS4)</a>
+</td>
+<td width="11%" align="left">44.7 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">16</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75570/doom-64-ps4" title="DOOM 64 (PS4) en Torrent">DOOM 64 (PS4)</a>
+</td>
+<td width="11%" align="left">217.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">4</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75569/resident-evil-3-update-ps4" title="Resident Evil 3 Update (PS4) en Torrent">Resident Evil 3 Update (PS4)</a>
+</td>
+<td width="11%" align="left">249.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">8</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75568/resident-evil-3-ps4" title="Resident Evil 3 (PS4) en Torrent">Resident Evil 3 (PS4)</a>
+</td>
+<td width="11%" align="left">20.9 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">0</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75260/immortals-fenyx-rising-switch" title="IMMORTALS FENYX RISING (SWITCH) en Torrent">IMMORTALS FENYX RISING (SWITCH)</a>
+ </td>
+<td width="11%" align="left">15.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">7</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">4</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/75120/firmware-10-1-1-sxos-3-1-0-choidujournx-1-0-2-switch" title="Firmware 10.1.1 + SXOS 3.1.0 + ChoiDujourNX (1.0.2) (SWITCH) en Torrent">Firmware 10.1.1 + SXOS 3.1.0 + ChoiDujourNX (1.0.2) (SWITCH)</a>
+</td>
+<td width="11%" align="left">339.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">8</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Jeux-Consoles"></i> <a href="/torrent/74914/ridge-racer-7-ps3" title="Ridge Racer 7 (PS3) en Torrent">Ridge Racer 7 (PS3)</a>
+</td>
+<td width="11%" align="left">7.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">19</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/logiciels" title="Télécharger des Logiciels Torrent"> Logiciels</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/79036/fortimail-installation-et-configuration-2020" title="FortiMail - Installation et Configuration 2020 en Torrent">FortiMail - Installation et Configuration 2020</a>
+</td>
+<td width="11%" align="left">870.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">65</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/77895/adobe-acrobat-pro-dc-2021-v21-001-20145" title="Adobe Acrobat Pro DC 2021 (v21.001.20145) en Torrent">Adobe Acrobat Pro DC 2021 (v21.001.20145)</a>
+</td>
+<td width="11%" align="left">962.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">163</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/77894/capture-one-pro-21-v14-1-0-74" title="Capture One Pro 21 v14.1.0.74 en Torrent">Capture One Pro 21 v14.1.0.74</a>
+</td>
+<td width="11%" align="left">451.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">71</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">7</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/77247/windows-10-all-in-one-20h2-2009-16in1-build-19042-804-x64" title="WINDOWS 10 All In One 20H2 2009 (16in1) BUILD 19042.804 X64 en Torrent">WINDOWS 10 All In One 20H2 2009 (16in1) BUILD 19042.804 X64</a>
+</td>
+<td width="11%" align="left">5.4 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">340</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">35</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/76893/mindjet-mindmanager-2020-v20-1-135" title="Mindjet MindManager 2020 v20.1.135 en Torrent">Mindjet MindManager 2020 v20.1.135</a>
+</td>
+<td width="11%" align="left">610.5 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">60</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/76892/heredis-pro-2021-version-21-2-0-3-fr-portable" title="Heredis Pro 2021 Version 21.2.0.3 FR Portable en Torrent">Heredis Pro 2021 Version 21.2.0.3 FR Portable</a>
+</td>
+<td width="11%" align="left">642.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">99</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/76282/total-commander-9-51-x86-x64-key" title="Total Commander 9.51 x86/x64 + Key en Torrent">Total Commander 9.51 x86/x64 + Key</a>
+</td>
+<td width="11%" align="left">7.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">119</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/76084/adobe-photoshop-2021" title="Adobe Photoshop 2021 en Torrent">Adobe Photoshop 2021</a>
+</td>
+<td width="11%" align="left">2.5 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">762</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">17</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75937/adobe-creative-cloud-2021-preactive" title="Adobe Creative Cloud 2021 préactivé en Torrent">Adobe Creative Cloud 2021 préactivé</a>
+</td>
+<td width="11%" align="left">19.0 GB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">212</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">46</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75716/nero-platinum-suite-2021-23-0-1010-win-x64" title="Nero Platinum Suite 2021 23.0.1010 (Win x64) en Torrent">Nero Platinum Suite 2021 23.0.1010 (Win x64)</a>
+</td>
+<td width="11%" align="left">920.1 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">113</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">4</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75715/iobit-malware-fighter-pro-8-4-0-760-32-64" title="IObit Malware Fighter Pro 8.4.0.760 32/64 en Torrent">IObit Malware Fighter Pro 8.4.0.760 32/64</a>
+</td>
+<td width="11%" align="left">61.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">24</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75621/ultramixer-pro-entertain-6-2-8-multi-fr-active-win-64" title="UltraMixer Pro Entertain 6.2.8 Multi-FR Activé Win 64 en Torrent">UltraMixer Pro Entertain 6.2.8 Multi-FR Activé Win 64</a>
+</td>
+<td width="11%" align="left">310.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">108</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75620/f-secure-freedome-vpn-2-39-6634-x86-x64" title="F-Secure Freedome VPN 2.39.6634 x86 x64 en Torrent">F-Secure Freedome VPN 2.39.6634 x86 x64</a>
+</td>
+<td width="11%" align="left">50.1 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">236</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+ <td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75565/teracopy-pro-v3-5" title="TeraCopy Pro v3.5 en Torrent">TeraCopy Pro v3.5</a>
+</td>
+<td width="11%" align="left">8.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">245</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Logiciels"></i> <a href="/torrent/75355/free-disney-plus-download-premium-v5-1-2-1211-crack-snt" title="Free Disney Plus Download Premium v5 1 2 1211 Crack SNT en Torrent">Free Disney Plus Download Premium v5 1 2 1211 Crack SNT</a>
+</td>
+<td width="11%" align="left">56.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">165</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr> </tbody>
+</table>
+<div class="block-detail">
+<div class="title"><i class="fa fa-th-large"></i><a href="/torrents/ebook" title="Télécharger des Ebook Torrent"> Ebook</a>
+</div>
+</div>
+<table class="table table-hover">
+<tbody>
+<tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79400/le-monde-du-12-mai-2021" title="Le Monde du 12 Mai 2021 en Torrent">Le Monde du 12 Mai 2021</a>
+</td>
+<td width="11%" align="left">25.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">12</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">3</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79399/mediapart-12-mai-2021" title="Mediapart - 12 Mai 2021 en Torrent">Mediapart - 12 Mai 2021</a>
+</td>
+<td width="11%" align="left">8.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">11</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">4</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79398/pack-journaux-du-12-mai-2021" title="Pack Journaux du 12 Mai 2021 en Torrent">Pack Journaux du 12 Mai 2021</a>
+</td>
+<td width="11%" align="left">465.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">12</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">13</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79397/charlie-hebdo-n-1503-du-12-mail-2021" title="Charlie Hebdo N°1503 du 12 mail 2021 en Torrent">Charlie Hebdo N°1503 du 12 mail 2021</a>
+</td>
+<td width="11%" align="left">48.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">17</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">15</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79396/l-equipe-du-12-mai-2021" title="L’equipe du 12 Mai 2021 en Torrent">L’equipe du 12 Mai 2021</a>
+</td>
+<td width="11%" align="left">30.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">7</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">4</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79395/le-canard-enchaine-n-5244-12-mai-2021" title="Le Canard enchaîné N°5244 - 12 Mai 2021 en Torrent">Le Canard enchaîné N°5244 - 12 Mai 2021</a>
+</td>
+<td width="11%" align="left">12.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">40</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">20</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79394/micro-pratique-juin-2021" title="Micro Pratique - Juin 2021 en Torrent">Micro Pratique - Juin 2021</a>
+</td>
+<td width="11%" align="left">47.9 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">81</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">21</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79319/france-football-11-mai-2021" title="France Football - 11 Mai 2021 en Torrent">France Football - 11 Mai 2021</a>
+</td>
+<td width="11%" align="left">101.3 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">24</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">5</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79318/mediapart-11-mai-2021" title="Mediapart - 11 Mai 2021 en Torrent">Mediapart - 11 Mai 2021</a>
+</td>
+<td width="11%" align="left">9.2 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">40</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">2</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79317/le-monde-du-11-mai-2021" title="Le Monde du 11 Mai 2021 en Torrent">Le Monde du 11 Mai 2021</a>
+</td>
+<td width="11%" align="left">10.8 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">18</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79316/pack-journaux-du-11-mai-2021" title="Pack Journaux du 11 Mai 2021 en Torrent">Pack Journaux du 11 Mai 2021</a>
+</td>
+<td width="11%" align="left">470.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">16</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">15</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79315/l-equipe-du-11-mai-2021" title="L’equipe du 11 Mai 2021 en Torrent">L’equipe du 11 Mai 2021</a>
+</td>
+<td width="11%" align="left">29.0 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">9</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79035/le-monde-du-29-avril-2021" title="Le Monde du 29 Avril 2021 en Torrent">Le Monde du 29 Avril 2021</a>
+</td>
+<td width="11%" align="left">11.4 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">27</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">0</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79034/pack-journaux-du-28-avril-2021" title="Pack Journaux du 28 Avril 2021 en Torrent">Pack Journaux du 28 Avril 2021</a>
+</td>
+<td width="11%" align="left">462.6 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">11</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">1</td>
+</tr><tr>
+<td width="71%" align="left"><i class="Ebook"></i> <a href="/torrent/79033/geo-france-mai-2021" title="Geo France - Mai 2021 en Torrent">Geo France - Mai 2021</a>
+</td>
+<td width="11%" align="left">99.7 MB</td>
+<td width="9%" align="left">
+<img src="/static/img/uploader.png" alt="seeders">71</td>
+<td width="9%" align="left">
+<img src="/static/img/downloader.png" alt="leechers">8</td>
+</tr> </tbody>
+</table>
+</div>
+<div class="bloc-torrent">
+<pre><strong><big>OxTorrent Officiel <span style="color:red;">.co</span></big><br><br>--> <kbd>Ctrl</kbd> + <kbd>D</kbd>  (Favoris)<br><br></strong></pre>
+<div class="title"><i class="fa fa-th-large"> </i> Films Hasard</div>
+<div class="cover">
+<a href="/torrent/63797/la-chute-du-president-french-dvdrip-2019">
+<img style="width:135px;height:177px;" title="La Chute du président FRENCH DVDRIP 2019" alt="La Chute du président FRENCH DVDRIP 2019" src="/pictures/la-chute-du-president-french-dvdrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63674/joker-truefrench-hdrip-md-2019">
+<img style="width:135px;height:177px;" title="Joker TRUEFRENCH HDRiP MD 2019" alt="Joker TRUEFRENCH HDRiP MD 2019" src="/pictures/joker-truefrench-hdrip-md-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63659/triple-threat-truefrench-webrip-2019">
+<img style="width:135px;height:177px;" title="Triple Threat TRUEFRENCH WEBRIP 2019" alt="Triple Threat TRUEFRENCH WEBRIP 2019" src="/pictures/triple-threat-truefrench-webrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63572/ibiza-french-webrip-2019">
+<img style="width:135px;height:177px;" title="Ibiza FRENCH WEBRIP 2019" alt="Ibiza FRENCH WEBRIP 2019" src="/pictures/ibiza-french-webrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63785/gemini-man-truefrench-hdrip-md-2019">
+<img style="width:135px;height:177px;" title="Gemini Man TRUEFRENCH HDRiP MD 2019" alt="Gemini Man TRUEFRENCH HDRiP MD 2019" src="/pictures/gemini-man-truefrench-hdrip-md-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63594/nicky-larson-private-eyes-french-dvdrip-2019">
+<img style="width:135px;height:177px;" title="Nicky Larson Private Eyes FRENCH DVDRIP 2019" alt="Nicky Larson Private Eyes FRENCH DVDRIP 2019" src="/pictures/nicky-larson-private-eyes-french-dvdrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63622/dora-et-la-cite-perdue-french-dvdrip-2019">
+<img style="width:135px;height:177px;" title="Dora et la Cité perdue FRENCH DVDRIP 2019" alt="Dora et la Cité perdue FRENCH DVDRIP 2019" src="/pictures/dora-et-la-cite-perdue-french-dvdrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63583/angel-of-mine-truefrench-dvdrip-2019">
+<img style="width:135px;height:177px;" title="Angel Of Mine TRUEFRENCH DVDRIP 2019" alt="Angel Of Mine TRUEFRENCH DVDRIP 2019" src="/pictures/angel-of-mine-truefrench-dvdrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/531/hostiles-french-dvdrip-2018">
+<img style="width:135px;height:177px;" title="Hostiles FRENCH DVDRIP 2018" alt="Hostiles FRENCH DVDRIP 2018" src="/pictures/hostiles-french-dvdrip-2018.jpg">
+<b>Télécharger !</b>
+</a>
+</div><div class="cover">
+<a href="/torrent/63742/anna-truefrench-dvdrip-2019">
+<img style="width:135px;height:177px;" title="Anna TRUEFRENCH DVDRIP 2019" alt="Anna TRUEFRENCH DVDRIP 2019" src="/pictures/anna-truefrench-dvdrip-2019.jpg">
+<b>Télécharger !</b>
+</a>
+</div></div>
+</div>
+</div>
+</div>
+<div class="base-bodi"></div>
+<div class="footing navbar-fixed-bottom">
+<div class="container">
+</div>
+</div>
+</div>
+</div>
+<script type="85bad2006fd3ef528ba54470-text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b9380c1953ef3be"></script>
+<div style="display:none"><div id="histats_counter"></div>
+
+<script type="85bad2006fd3ef528ba54470-text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4336799,4,511,95,18,00000000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4336799&101" alt="how to add a hit counter to a website" border="0"></a></noscript>
+</div>
+<script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="85bad2006fd3ef528ba54470-|49" defer=""></script></body>
+</html>
